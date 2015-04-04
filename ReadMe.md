@@ -49,21 +49,23 @@ Create a local appSettings.config file (It is intentionally missing, it is part 
 
 It should look like below:
 
-'<appSettings>'
+```xml
+<appSettings>
 
-  '<!-- Tinamous account address for MQTT Server -->'
-  '<add key="Tinamous.Url" value="demo.Tinamous.com"/>'
+  <!-- Tinamous account address for MQTT Server -->
+  <add key="Tinamous.Url" value="demo.Tinamous.com"/>
 
-  '<!-- Device username and password -->'
-  '<!-- Remember for MQTT to include account as part of the username -->'
-  '<add key="Tinamous.Username" value="Kettle.demo" />'
-  '<add key="Tinamous.Password" value="<password goes here>" />'
+  <!-- Device username and password -->
+  <!-- Remember for MQTT to include account as part of the username -->
+  <add key="Tinamous.Username" value="Kettle.demo" />
+  <add key="Tinamous.Password" value="<password goes here>" />
 
-  '<!-- Your local network base address, might be 192.168.1.{0} or similar -->'
-  '<add key="iKettle.NetworkTemplate" value="10.0.0.{0}"/>'
+  <!-- Your local network base address, might be 192.168.1.{0} or similar -->
+  <add key="iKettle.NetworkTemplate" value="10.0.0.{0}"/>
 
-  '<!-- If you know the ip address, or have a lot of devices at a low IP address skip over discovery of the first n IP addresses -->'
-  '<!-- e.g. this will start the discovery process at 10.0.0.40 -->'
-  '<add key="iKettle.StartAt" value="40"/>'
+  <!-- If you know the ip address, or have a lot of devices at a low IP address skip over discovery of the first n IP addresses -->
+  <!-- e.g. this will start the discovery process at 10.0.0.40 -->
+  <add key="iKettle.StartAt" value="40"/>
   
-'</appSettings>'
+</appSettings>
+```
