@@ -182,7 +182,20 @@ namespace iKettle.Core
 
         private void ProcessStatusKey(string read)
         {
-            // Handle the kettles current status: "sys status key"....
+            // Handle the kettles current status: ""sys status key=X"...
+            
+            string[] status = read.Split('=');
+            byte[] statusBytes = Encoding.ASCII.GetBytes(status[1]);
+            Debug.Assert(statusBytes.Length == 1, "Expected single byte status");
+
+            byte statusByte = statusBytes[0];
+            bool heat100 = (statusByte & 0x32) == 0x32;
+            bool heat96 = (statusByte & 0x16) == 0x16;
+            bool heat80 = (statusByte & 0x08) == 0x08;
+            bool heat65 = (statusByte & 0x04) == 0x04;
+            bool warm = (statusByte & 0x02) == 0x02;
+            bool on = (statusByte & 0x01) == 0x01;
+
         }
 
         /// <summary>

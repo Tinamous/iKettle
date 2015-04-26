@@ -15,6 +15,7 @@ Contains the logic for discovering, connecting and communicating with the iKettl
 See: https://plus.google.com/+MarkJCox/posts/Nv6NZauosUX
 and: https://github.com/lloydwatkin/ikettle.js
 also: https://github.com/alistairjcbrown/node_ikettle
+and: http://www.awe.com/mark/blog/20140223.html
 
 
 ## iKettle.Tinamous
